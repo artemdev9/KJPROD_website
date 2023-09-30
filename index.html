@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en" id='html'>
+
+<head>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,500&display=swap"
+        rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="resources/js/main.js" defer></script>
+    <link rel="stylesheet" type="text/css" href="resources/css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="resources/css/style.css" />
+    <link rel="icon" href="resources/images/icon.png" type="image/png">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/p5.js"></script>
+    <script src="./resources/js/sketch.js"></script>
+    <title>KJPROD</title>
+
+</head>
+
+<body>
+
+    <div class="social_links_computer">
+        <a href="https://t.me/kj_prod" target="_blank"><img src="resources/images/telegram.png" alt=""></a>
+        <a href="https://vk.com/club182820791" class="vk" target="_blank"><img src="resources/images/vk.png" alt=""></a>
+        <a href="https://instagram.com/kj.prod?igshid=OGQ5ZDc2ODk2ZA==" target="_blank"><img
+                src="resources/images/instagram.png" alt=""></a>
+    </div>
+
+    <header class="logo_page">
+        <div class="logo_container">
+            <h1 style="margin-right: 2rem;">KJ</h1>
+            <div id='sketch'></div>
+        </div>
+        <h1>Production</h1>
+        <div class="button_container">
+            <button id="eng">EN</button>
+            <button id="rus">RU</button>
+        </div>
+    </header>
+
+    <main>
+        <section class="about_me" id="about_me">
+            <div class="about_me_container">
+                <img class="about_me_image animationUp" src="resources/images/about_me_photo.jpg" alt="">
+                <div class="about_me_section animationUp">
+                    <h2 class="name_title">Gleb Kiashko</h2>
+                    <span class="job_title">Founder, Sound engineer</span>
+                    <h3 class="work_concept"><span class="main_work_margin">-</span>"The main concept of my work - <br>
+                        <span class="individual">an individual </span> approach to each track."
+                    </h3>
+                    <h3 class="i_make">I create:</h3>
+                    <ul>
+                        <li class="list_1">a live mix structure</li>
+                        <li class="list_2">sound that complements the mood of the track</li>
+                    </ul>
+                    <h3 class="mix_end">I will make the mix interesting for the listener.</h3>
+                </div>
+            </div>
+        </section>
+        <section class="my_mixes">
+            <h2 class="my_mixes_title">Listen to my mixes</h2>
+            <div class="my_mixes_playlist_main">
+                <div class="playlist">
+                </div>
+            </div>
+            <div class="my_mixes_playlists_selectors">
+                <img class="soundcloud_playlist_selector" src="./resources/images/soundcloud.png" alt=""
+                    onclick="playlist(event)">
+                <img class="spotify_playlist_selector" src="./resources/images/spotify.png" alt=""
+                    onclick="playlist(event)">
+                <img class="applemusic_playlist_selector" src="./resources/images/applemusic.png" alt=""
+                    onclick="playlist(event);">
+            </div>
+        </section>
+        <section class="main_video_slide">
+            <!-- hide element if user chooses en and align the text so that it is centered  -->
+            <div class="main_video">
+                <iframe id="video" width="315" height="560" src="https://www.youtube.com/embed/CThiTJsikk8"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
+            </div>
+            <div class="main_video_slide_text">
+                <h2 class="main_video_slide_text_title">How can I make your music truly stand out?</h2>
+                <h3 class="main_video_slide_text_first_p">
+                    While many mix engineers aim for a good-sounding track, it's essential to realize that a good track alone is just one of many in a sea of thousands. So, what's the secret to making your music exceptional?
+                </h3>
+                <h3 class="main_video_slide_text_second_p">
+                    <span class="main_work_margin"></span>I specialize in uncovering the unique essence of your music and enhancing it through my mixing skills. Whether it's a distinct vocal quality, an unconventional instrument tone, or an overall captivating sound, I delve into the heart of your music's vibe to craft a tailored sonic experience.
+                </h3>
+                <h3 class="main_video_slide_text_third_p">
+                    <span class="main_work_margin"></span>If you're keen on adding an extra layer of brilliance to your track, don't hesitate to reach out to me. Let's collaborate and take your music to the next level!
+                </h3>
+            </div>
+        </section>
+        <section class="contact_me">
+            <div class="contact-form">
+                <!--Submit the contact information to email-->
+                <form action="https://formsubmit.co/kijaschko.music313@gmail.com" method="POST">
+                    <!--Make home submit return to the main page.-->
+                    <input type="hidden" name="_next" value="https://main_page">
+                    <h2 class="title">Contact me</h2>
+                    <div class="input-container">
+                        <input type="text" name="name" class="input">
+                        <label class="contact_me_name_label" for="">name</label>
+                        <span class="contact_me_name">name</span>
+                    </div>
+                    <div class="input-container">
+                        <input type="emial" name="email" class="input">
+                        <label class="contact_me_email_label" for="">email</label>
+                        <span class="contact_me_email">email</span>
+                    </div>
+                    <div class="input-container textarea">
+                        <textarea name="message" class="input"></textarea>
+                        <label class="contact_me_message_label" for="">message</label>
+                        <span class="contact_me_message">message</span>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn" type="submit">Send
+                        </button>
+                    </div>
+                </form>
+            </div>
+            <div class="social_links_mobile">
+                <a href="https://t.me/kj_prod" target="_blank"><img src="resources/images/telegram.png" alt=""></a>
+                <a href="https://vk.com/club182820791" class="vk" target="_blank"><img src="resources/images/vk.png" alt=""></a>
+                <a href="https://instagram.com/kj.prod?igshid=OGQ5ZDc2ODk2ZA==" target="_blank"><img
+                        src="resources/images/instagram.png" alt=""></a>
+            </div>
+        </section>
+        <footer class="footer_page">
+            <div class="footer_page_certificates_mobile">
+                <a href="resources/images/Gleb_certificat_2.png" target="_blank">
+                    <figure class="img_figure">
+                        <img class="hover_zoom" src="resources/images/Gleb_certificat_2.png"
+                            alt="Certificate of completing a course.">
+                        <figcaption class="img_figure_caption" id='certificate'>
+                            "Mastering Pro" from <br>Musicheads</figcaption>
+                    </figure>
+                </a>
+                <a href='resources/images/Gleb_certificat.png' target="_blank">
+                    <figure class="img_figure">
+                        <img class="hover_zoom" src="resources/images/Gleb_certificat.png"
+                            alt="Certificate of completing a course.">
+                        <figcaption class="img_figure_caption" id="certificate2">
+                            International certificate <br> STEINBERG</figcaption>
+                    </figure>
+                </a>
+            </div>
+            <div class="footer_page_container">
+                <div class="footer_page_logo">
+                    <h1 class='footer_logo_part1'>KJ</h1>
+                    <h1 class='footer_logo_part2'>Production</h1>
+                </div>
+                <div class="footer_developer">
+                    <a href="">
+                        <h3>Developed by Artem Dumchev</h3>
+                    </a>
+                </div>
+                <div class="footer_page_certificates">
+                    <a href="resources/images/Gleb_certificat_2.png" target="_blank">
+                        <figure class="img_figure">
+                            <img class="hover_zoom" src="resources/images/Gleb_certificat_2.png"
+                                alt="Certificate of completing a course.">
+                            <figcaption class="img_figure_caption" id="certificate">
+                                "Mastering Pro" from <br>Musicheads</figcaption>
+                        </figure>
+                    </a>
+                    <a href='resources/images/Gleb_certificat.png' target="_blank">
+                        <figure class="img_figure">
+                            <img class="hover_zoom" src="resources/images/Gleb_certificat.png"
+                                alt="Certificate of completing a course.">
+                            <figcaption class="img_figure_caption" id="certificate2">
+                                International certificate <br> STEINBERG</figcaption>
+                        </figure>
+                    </a>
+                </div>
+            </div>
+
+        </footer>
+    </main>
+</body>
+
+</html>
