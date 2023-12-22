@@ -148,7 +148,7 @@ function handleClickbuttonRU() {
   // title page
   document.getElementsByClassName("name_title")[0].innerHTML = "Глеб Кияшко";
   document.getElementsByClassName("job_title")[0].innerHTML =
-    "Основатель, звукорежиссер";
+    "Основатель & <br> Звукорежиссер";
   document.getElementsByClassName(
     "work_concept"
   )[0].innerHTML = `<span class="main_work_margin">-</span>"Главная концепция моей
@@ -221,7 +221,7 @@ function handleClickbuttonEN() {
   // title page
   document.getElementsByClassName("name_title")[0].innerHTML = "Gleb Kiashko";
   document.getElementsByClassName("job_title")[0].innerHTML =
-    "Founder, Sound engineer";
+    "Founder & <br> Sound engineer";
   document.getElementsByClassName(
     "work_concept"
   )[0].innerHTML = `<span class="main_work_margin">-</span>"The main concept of my work - <br> <span class="individual">an individual </span> approach to each track."`;
