@@ -310,6 +310,21 @@ inputs.forEach((input) => {
   input.addEventListener("blur", blurFunc);
 });
 
+// line height faq
+var faq = document.getElementsByClassName("faq")[0];
+
+var faqHeight = faq.clientHeight;
+
+var lineContainer4 = document.getElementsByClassName("line_container_4")[0];
+lineContainer4.style.top = "calc(400% + " + faqHeight / 2 + "px)";
+
+var line4 = document.getElementsByClassName("line_4")[0];
+line4.style.height = faqHeight + "px";
+
+var lineContainer5 = document.getElementsByClassName("line_container_5")[0];
+lineContainer5.style.top = "calc(450% + " + faqHeight + "px)";
+
+// soccial links stops in the middle of the contact me page
 var handlerFired;
 const socialLinks = document.getElementsByClassName("social_links_computer")[0];
 window.addEventListener("scroll", function (e) {
@@ -320,7 +335,8 @@ window.addEventListener("scroll", function (e) {
     if (!handlerFired) {
       handlerFired = 1;
       socialLinks.style.position = "absolute";
-      socialLinks.style.top = "450%";
+      // if the last vartical line doesnt work, this line is probably why
+      socialLinks.style.top = "calc(450% + " + faqHeight + "px)";
     }
   }
   if (containerTop > 0) {
