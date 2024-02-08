@@ -29,7 +29,7 @@
                 src="resources/images/instagram.png" alt=""></a>
     </div>
 
-    <!-- line for slide 2 and 3 -->
+<!-- line for slide 2 and 3 -->
     <div class="line_container">
         <div class="line"></div>
     </div>
@@ -52,7 +52,7 @@
     <div class="line_container_5">
         <div class="line_5"></div>
     </div>
-
+    
     <header class="logo_page">
         <div class="logo_container">
             <h1 style="margin-right: 2rem;">KJ</h1>
@@ -63,8 +63,6 @@
             <button id="eng">EN</button>
             <button id="rus">RU</button>
         </div>
-
-
     </header>
 
     <main>
@@ -123,16 +121,33 @@
         <section class="my_mixes">
             <h2 class="my_mixes_title">Portfolio</h2>
             <div class="my_mixes_playlist_main">
-                <div class="playlist">
+                <div class="my_mixes_playlist_main">
+                    <div id="spotify_playlist" class="playlist playlist_sides">
+                        <iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" frameborder="0"
+                            height="450px" width="100%" style=" overflow:hidden;border-radius:10px;"
+                            sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
+                            src="https://open.spotify.com/embed/playlist/0mAljitxKfatD65pbs8Uvy?utm_source=generator"></iframe>
+                    </div>
+                    <div id="soundcloud_playlist" class="playlist active fadeInUp">
+                        <iframe width="100%" height="450px" scrolling="no"
+                            style="overflow:hidden;border-radius:10px;" frameborder="no" allow="autoplay"
+                            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1646693317&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+                    </div>
+                    <div id="applemusic_playlist" class="playlist playlist_sides">
+                        <iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" frameborder="0"
+                            height="450px" width="100%" style="border-radius:10px; height: 450px;"
+                            sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
+                            src="https://embed.music.apple.com/ru/playlist/kj-prod/pl.u-6GNZtWqVr0K"></iframe>
+                    </div>
                 </div>
             </div>
             <div class="my_mixes_playlists_selectors">
-                <img class="soundcloud_playlist_selector" src="./resources/images/soundcloud.png" alt=""
-                    onclick="playlist(event)">
-                <img class="spotify_playlist_selector" src="./resources/images/spotify.png" alt=""
-                    onclick="playlist(event)">
-                <img class="applemusic_playlist_selector" src="./resources/images/applemusic.png" alt=""
-                    onclick="playlist(event);">
+                <img class="playlist_selector playlist-selector-active" src="./resources/images/soundcloud.png" alt=""
+                    data-playlist="soundcloud_playlist" onclick="playlist(event)">
+                <img class="playlist_selector" src="./resources/images/spotify.png" alt=""
+                    data-playlist="spotify_playlist" onclick="playlist(event)">
+                <img class="playlist_selector" src="./resources/images/applemusic.png" alt=""
+                    data-playlist="applemusic_playlist" onclick="playlist(event);">
             </div>
         </section>
         <section class="faq">
@@ -167,15 +182,18 @@
         <section class="contact_me">
             <h2 class="contact_me_title">Reach out to me for more examples</h2>
             <div class="contact_form_container">
-                <form action="" class="contact_form">
-                    <input class='input' type="text" placeholder="name">
-                    <input class='input' type="text" placeholder="email">
-                    <textarea class='message' type="text" placeholder="message"></textarea>
+                <form action="https://formspree.io/f/xwkglybv" method="POST" class="contact_form" id="contactForm">
+                    <input name="name" class='input' type="text" placeholder="name">
+                    <input name="email" class='input' type="text" placeholder="email">
+                    <textarea name="message" class='message' type="text" placeholder="message"></textarea>
                     <div class="send_container">
-                        <button class="button"><h2 class="button_text">send</h2></button>
+                        <button type="submit" class="button">
+                            <h2 class="button_text">send</h2>
+                        </button>
                         <div class="button_area"></div>
                     </div>
                 </form>
+
             </div>
             <div class="social_links_mobile">
                 <a href="https://t.me/kj_prod" target="_blank"><img src="resources/images/telegram.png" alt=""></a>

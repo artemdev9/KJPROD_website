@@ -54,81 +54,24 @@ function animationBackgroundColor() {
 window.addEventListener("scroll", animationUp);
 window.addEventListener("scroll", animationBackgroundColor);
 
-var nameOfPlaylistPrev = "";
-var nameOfPlaylistCurrent = "";
-
-var elementOfPlaylistSelectorPrev = "";
-var elementOfPlaylistSelectorCurrent = "";
-
-var playlistShown = false;
-
 function playlist(event) {
-  if (nameOfPlaylistCurrent === "") {
-    nameOfPlaylistCurrent = "spotify_playlist_selector";
-    elementOfPlaylistSelectorCurrent = document.getElementsByClassName(
-      "spotify_playlist_selector"
-    )[0];
-    elementOfPlaylistSelectorCurrent.classList.add("selector_active");
-    showPlaylist();
-  } else if (nameOfPlaylistCurrent !== event.target.classList[0]) {
-    nameOfPlaylistPrev = nameOfPlaylistCurrent;
-    nameOfPlaylistCurrent = event.target.classList[0];
-    elementOfPlaylistSelectorPrev = elementOfPlaylistSelectorCurrent;
-    elementOfPlaylistSelectorCurrent = document.getElementsByClassName(
-      event.target.classList[0]
-    )[0];
-    hidePlaylist();
-  }
-}
+  document.querySelectorAll(".playlist_selector").forEach((button) => {
+    button.classList.remove("playlist-selector-active");
+  });
 
-window.onload = function () {
-  playlist();
-  handleClickbuttonEN();
-};
+  event.target.classList.add("playlist-selector-active");
 
-function showPlaylist() {
-  const playlistElement = document.getElementsByClassName("playlist")[0];
-  var playlistContent;
-  if (nameOfPlaylistCurrent === "soundcloud_playlist_selector") {
-    playlistContent = `<iframe width="100%" height="450px" scrolling="no" style="overflow:hidden;border-radius:10px;"
-    frameborder="no" allow="autoplay" onload="iframeLoaded()"
-    src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1646693317&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>`;
-  } else if (nameOfPlaylistCurrent === "spotify_playlist_selector") {
-    playlistContent = `<iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" frameborder="0" height="450px"
-    width="100%" style=" overflow:hidden;border-radius:10px;" onload="iframeLoaded()"
-    sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
-    src="https://open.spotify.com/embed/playlist/0mAljitxKfatD65pbs8Uvy?utm_source=generator"></iframe>`;
-  } else if (nameOfPlaylistCurrent === "applemusic_playlist_selector") {
-    playlistContent = `<iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" frameborder="0" height="450px"
-    width="100%" style="border-radius:10px; height: 450px;" onload="iframeLoaded()"
-    sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
-    src="https://embed.music.apple.com/ru/playlist/kj-prod/pl.u-6GNZtWqVr0K"></iframe>`;
-  }
-  playlistElement.innerHTML = playlistContent;
-}
+  document.querySelectorAll(".playlist").forEach((playlist) => {
+    playlist.style.display = "none";
+    playlist.style.zIndex = "0";
+    playlist.classList.remove("active", "fadeInUp", "fadeOutUp");
+  });
 
-//async
-async function hidePlaylist() {
-  elementOfPlaylistSelectorPrev.classList.remove("selector_active");
-  elementOfPlaylistSelectorCurrent.classList.add("selector_active");
+  const selectedPlaylistID = event.target.getAttribute("data-playlist");
+  const selectedPlaylist = document.getElementById(selectedPlaylistID);
 
-  const playlistElement = document.getElementsByClassName("playlist")[0];
-  playlistElement.classList.remove("fade-in-down-animation");
-  playlistElement.classList.add("fade-out-down-animation");
-  await sleep(500); // this number has to be the same as the fade out or less
-  playlistElement.classList.remove("fade-out-down-animation");
-  showPlaylist();
-}
-
-// runs the animation when the iframe is loaded
-function iframeLoaded() {
-  const playlistElement = document.getElementsByClassName("playlist")[0];
-  playlistElement.classList.add("fade-in-down-animation");
-}
-
-// promise
-function sleep(ms) {
-  return new Promise((resolve) => setTimeout(resolve, ms));
+  selectedPlaylist.classList.add("active", "fadeInUp");
+  selectedPlaylist.style.display = "block";
 }
 
 function intro() {
@@ -139,7 +82,6 @@ function intro() {
 var buttonRU = document.getElementById("rus");
 var buttonEN = document.getElementById("eng");
 
-// Define a function to be executed when the button is clicked
 function handleClickbuttonRU() {
   const html = document.getElementById("html");
   var targetElement = document.getElementById("about_me");
@@ -279,7 +221,6 @@ function handleClickbuttonEN() {
   document.getElementsByClassName("vk")[1].style.display = "none";
 }
 
-// Attach the function to the button's click event
 buttonRU.addEventListener("click", handleClickbuttonRU);
 buttonEN.addEventListener("click", handleClickbuttonEN);
 
@@ -287,28 +228,11 @@ function scrollToTop() {
   window.scrollTo(0, 0);
 }
 
-// Add an event listener to call scrollToTop when the page finishes loading
-window.addEventListener("load", scrollToTop);
+if ("scrollRestoration" in history) {
+  history.scrollRestoration = "manual";
+}
 
-//Script for the contact information input
-const inputs = document.querySelectorAll(".input");
-//function to add the class focus
-function focusFunc() {
-  let parent = this.parentNode;
-  parent.classList.add("focus");
-}
-//function to remove the class focus
-function blurFunc() {
-  let parent = this.parentNode;
-  if (this.value == "") {
-    parent.classList.remove("focus");
-  }
-}
-//for each input eventlistners are added
-inputs.forEach((input) => {
-  input.addEventListener("focus", focusFunc);
-  input.addEventListener("blur", blurFunc);
-});
+window.addEventListener("load", scrollToTop);
 
 // line height faq
 var faq = document.getElementsByClassName("faq")[0];
@@ -324,23 +248,23 @@ line4.style.height = faqHeight + "px";
 var lineContainer5 = document.getElementsByClassName("line_container_5")[0];
 lineContainer5.style.top = "calc(450% + " + faqHeight + "px)";
 
-// soccial links stops in the middle of the contact me page
-var handlerFired;
+// social links stops in the middle of the contact me page
 const socialLinks = document.getElementsByClassName("social_links_computer")[0];
-window.addEventListener("scroll", function (e) {
+
+window.addEventListener("scroll", function () {
+  // Get the distance from the top of the viewport to the top of the .contact_me section
   var containerTop = document
     .querySelector(".contact_me")
     .getBoundingClientRect().top;
+
+  console.log(containerTop);
+  // Check if the .contact_me section has reached the top of the viewport
   if (containerTop <= 0) {
-    if (!handlerFired) {
-      handlerFired = 1;
-      socialLinks.style.position = "absolute";
-      // if the last vartical line doesnt work, this line is probably why
-      socialLinks.style.top = "calc(450% + " + faqHeight + "px)";
-    }
-  }
-  if (containerTop > 0) {
-    handlerFired = 0;
+    // Once the .contact_me section reaches the top, position the social links absolutely
+    socialLinks.style.position = "absolute";
+    socialLinks.style.top = "calc(450% + " + faqHeight + "px)"; // Adjust this value as needed
+  } else {
+    // Before the .contact_me section reaches the top, keep the social links fixed
     socialLinks.style.position = "fixed";
     socialLinks.style.top = "50%";
   }
