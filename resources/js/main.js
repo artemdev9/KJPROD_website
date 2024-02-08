@@ -26,33 +26,7 @@ function animationUp() {
   }
 }
 
-function animationBackgroundColor() {
-  var reveals = document.querySelectorAll(".animationBackgroundColor"); // works
-
-  // Iterate through each element with the class "reveal"
-  for (var i = 0; i < reveals.length; i++) {
-    // Calculate the height of the browser window
-    var windowHeight = window.innerHeight;
-
-    // Get the distance between the top of the current element and the top of the viewport
-    var elementTop = reveals[i].getBoundingClientRect().top;
-
-    // Define a threshold for an element to be considered visible (150 pixels)
-    var elementVisible = 150;
-
-    // Check if the top of the element is within the visible range of the window
-    if (elementTop < windowHeight - elementVisible) {
-      // If the element is within the visible range, add the "active" class to it
-      reveals[i].classList.add("active");
-    } else {
-      // If the element is not within the visible range, remove the "active" class from it
-      reveals[i].classList.remove("active");
-    }
-  }
-}
-
 window.addEventListener("scroll", animationUp);
-window.addEventListener("scroll", animationBackgroundColor);
 
 function playlist(event) {
   document.querySelectorAll(".playlist_selector").forEach((button) => {
@@ -257,7 +231,6 @@ window.addEventListener("scroll", function () {
     .querySelector(".contact_me")
     .getBoundingClientRect().top;
 
-  console.log(containerTop);
   // Check if the .contact_me section has reached the top of the viewport
   if (containerTop <= 0) {
     // Once the .contact_me section reaches the top, position the social links absolutely
