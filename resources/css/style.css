@@ -49,7 +49,7 @@ h2 {
 }
 
 .job_title {
-    height: 14vh;
+    height: 12vh;
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
     font-size: 1.2rem;
@@ -74,6 +74,7 @@ h2 {
     height: 8vh;
     font-weight: 300;
     font-size: 1.4em;
+    margin-bottom: 0.4rem;
 }
 
 .quote_right{
@@ -547,7 +548,7 @@ h1 {
 
 .contact_me_title{
     margin-top: 3rem;
-    margin-bottom: 3rem;
+    margin-bottom: 1rem;
     color: #37447E;
     height: 10%;
 }
@@ -570,6 +571,7 @@ h1 {
     border-radius: 10px;
     height: 3rem;
     border: 0px;
+    cursor: pointer;
 }
 
 .input[type=text] {
@@ -603,6 +605,7 @@ h1 {
     resize: none;    
     overflow-y: auto;
     overflow-x: hidden;
+    cursor: pointer;
 }
 
 .message:focus::placeholder {
