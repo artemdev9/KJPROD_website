@@ -57,11 +57,29 @@ h2 {
     text-align: center;
 }
 
+.quote_mobile {
+    display: none;
+    /* flex-direction: column; */
+    width: 75vw;
+    font-style: italic;
+    line-height: 2em;
+}
+
+.quote_mobile h2 {
+    color: #37447E;
+    width: 100%;
+    height: 8vh;
+    font-weight: 300;
+    font-size: 1.4em;
+    margin-bottom: 0.4rem;
+}
+
 .quote {
     display: grid;
     flex-direction: column;
     width: 75vw;
     font-style: italic;
+    line-height: 2em;
 }
 
 .quote_left {
@@ -758,6 +776,7 @@ h1 {
     display: block;
     max-width: 100%;
     height: auto;
+    margin-bottom: 0.6rem;
     transition: transform 0.3s ease-in-out;
 }
 
@@ -877,6 +896,7 @@ h1 {
         display: flex;
         justify-content: center;
         align-items: center;
+        margin-bottom: 3rem;
     }
 
     .footer_developer a h3 {
@@ -903,6 +923,24 @@ h1 {
     .img_figure_caption {
         font-size: 1rem;
     }
+
+    .main_video_slide_text{
+        margin-left: 5rem;
+    }
+
+    .main_video_slide_text_first_p{
+        font-size: 1.2rem;
+    }
+
+    .social_links_mobile {
+        display: flex;
+    }
+
+    .social_links_mobile img {
+        width: 5rem;
+        margin: 2rem;
+    }
+
 }
 
 @media screen and (max-width: 1170px) and (orientation: portrait) {
@@ -920,10 +958,6 @@ h1 {
 }
 
 @media screen and (max-width: 1000px) and (orientation: portrait) {
-    .social_links_computer {
-        display: none;
-    }
-
     .logo_page::after {
         content: none;
     }
@@ -943,21 +977,13 @@ h1 {
     .faq::after {
         content: none;
     }
+
     .contact_me::after {
         content: none;
     }
 
     .contact_form_container{
         width: 80%;
-    }
-
-    .social_links_mobile {
-        display: flex;
-    }
-
-    .social_links_mobile img {
-        width: 5rem;
-        margin: 2rem;
     }
 
     .main_video {
@@ -989,6 +1015,10 @@ h1 {
 @media screen and (max-width: 800px) and (orientation: portrait) {
     html {
         font-size: 10px;
+    }
+
+    .social_links_computer{
+        display: none;
     }
 
     .main_video_slide_text_ru {
@@ -1030,6 +1060,16 @@ h1 {
 
     .contact-form {
         width: 80%;
+    }
+}
+
+@media screen and (max-width: 720px) and (orientation: portrait) {
+    .quote{
+        display: none;
+    }
+
+    .quote_mobile{
+        display: grid;
     }
 }
 
