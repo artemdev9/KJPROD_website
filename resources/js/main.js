@@ -62,7 +62,8 @@ function handleClickbuttonRU() {
   document.getElementsByClassName("quote")[0].innerHTML =
     '<h2 class="quote_left"><span class="main_work_margin">-</span>"Основная концепция моей работы -</h2>' +
     '<h2 class="quote_right">индивидуальный подход к каждому треку."</h2>';
-
+  document.getElementsByClassName("quote_mobile")[0].innerHTML =
+    '<h2><span class="main_work_margin">-</span>"Основная концепция моей работы - индивидуальный подход к каждому треку."</h2>';
   document.getElementsByClassName("name_title")[0].innerHTML = "Глеб Кияшко";
   document.getElementsByClassName("job_title")[0].innerHTML =
     "Основатель & <br> Звукорежиссер";
@@ -110,7 +111,7 @@ function handleClickbuttonRU() {
   document.getElementsByClassName("q2")[0].innerHTML = "Сколько стоит?";
   document.getElementsByClassName("a2")[0].innerHTML =
     "Цена зависит от сложности вашего проекта - от 3.000₽ до 10.000₽.";
-  document.getElementsByClassName("q1")[0].innerHTML = "Сколько ждать?";
+  document.getElementsByClassName("q3")[0].innerHTML = "Сколько ждать?";
   document.getElementsByClassName("a3")[0].innerHTML =
     "Срок выполнения 7-10 дней.";
   document.getElementsByClassName("q4")[0].innerHTML = "А если не понравится?";
@@ -140,12 +141,12 @@ function handleClickbuttonEN() {
   document.getElementsByClassName("quote")[0].innerHTML =
     '<h2 class="quote_left"><span class="main_work_margin">-</span>"The main concept of my work -</h2>' +
     '<h2 class="quote_right">an individual approach to each track."</h2>';
-
+  document.getElementsByClassName("quote_mobile")[0].innerHTML =
+    '<h2><span class="main_work_margin">-</span>"The main concept of my work - an individual approach to each track."</h2>';
   document.getElementsByClassName("name_title")[0].innerHTML = "Gleb Kiashko";
   document.getElementsByClassName("job_title")[0].innerHTML =
     "Founder & <br> Sound engineer";
   //main_video_slide
-  document.getElementsByClassName("main_video")[0].style.display = "none";
   document.getElementsByClassName("main_video_slide_text_title")[0].innerHTML =
     "How can I make your music truly stand out?";
   document.getElementsByClassName(

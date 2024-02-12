@@ -331,8 +331,9 @@ h1 {
 }
 
 .my_mixes_title {
-    margin-top: 3rem;
-    margin-bottom: 2rem;
+    margin: 2rem;
+    margin-bottom: 3rem;
+    text-align: center;
     font-size: 3rem;
     height: 10%;
     color: #37447e;
@@ -394,8 +395,9 @@ h1 {
 }
 
 .faq_title {
-    margin-top: 3rem;
-    margin-bottom: 2rem;
+    margin: 2rem;
+    margin-bottom: 3rem;
+    text-align: center;
     color: #fff;
 }
 
@@ -455,14 +457,14 @@ h1 {
 
 .main_video_info {
     display: flex;
-    justify-content: start;
+    justify-content: center;
     align-items: center;
-    width: 80%;
+    width: 100%;
     height: 100%;
 }
 
 .main_video_slide_text_title {
-    margin: 2rem 0;
+    margin: 2rem;
     color: white;
     text-align: center;
 }
@@ -483,7 +485,7 @@ h1 {
 }
 
 .main_video_slide_text {
-    width: 60%;
+    width: 100%;
     line-height: 30px;
 }
 
@@ -511,12 +513,6 @@ h1 {
     width: 50%;
 }
 
-.main_video_slide_text_en {
-    width: 60%;
-    margin-left: 20%;
-    margin-right: 20%;
-}
-
 /* contact_me */
 
 .contact_me {
@@ -539,7 +535,9 @@ h1 {
 }
 
 .contact_me_title {
-    margin: 3rem 0;
+    margin: 2rem;
+    margin-bottom: 3rem;
+    text-align: center;
     color: #37447E;
     height: 10%;
 }
@@ -713,6 +711,7 @@ h1 {
 .footer_logo_part1 {
     font-size: 3rem;
     margin-right: 2rem;
+    margin-top: 2rem;
 }
 
 .footer_logo_part2 {
@@ -878,13 +877,17 @@ h1 {
 
 /* media queries */
 
-@media screen and (max-width: 1300px) and (orientation: portrait) {
+@media screen and (max-width: 1300px) {
 
-    .logo_page {
-        display: none;
+    .main_video_info {
+        justify-content: space-evenly;
     }
 
     .footer_page_certificates {
+        display: none;
+    }
+
+    .social_links_computer{
         display: none;
     }
 
@@ -920,14 +923,6 @@ h1 {
         font-size: 1rem;
     }
 
-    .main_video_slide_text{
-        margin-left: 6rem;
-    }
-
-    .main_video_slide_text_first_p{
-        font-size: 1rem;
-    }
-
     .social_links_mobile {
         display: flex;
     }
@@ -937,8 +932,8 @@ h1 {
         margin: 2rem;
     }
 
-    .main_video{
-        width: 25%;
+    .main_video_ru{
+        width: 30%;
         display: flex;
     }
 
@@ -967,9 +962,13 @@ h1 {
     }
 
 
+    .main_video_slide_text_en {
+        width: 100%;
+    }
+
 }
 
-@media screen and (max-width: 1170px) and (orientation: portrait) {
+@media screen and (max-width: 1170px) {
     html {
         font-size: 14px;
     }
@@ -983,13 +982,13 @@ h1 {
     }
 }
 
-@media screen and (max-width: 1000px) and (orientation: portrait) {
+@media screen and (max-width: 1000px) {
    
     .contact_form_container{
         width: 80%;
     }
 
-    .main_video {
+    .main_video_ru {
         width: 45%;
     }
 
@@ -1002,34 +1001,21 @@ h1 {
         font-size: 1.6rem;
     }
 
-    .main_video_slide_text_en {
-        width: 100%;
-        margin-left: 10%;
-        margin-right: 10%;
-    }
 }
 
-@media screen and (max-width: 960px) and (orientation: portrait) {
+@media screen and (max-width: 960px) {
     html {
         font-size: 12px;
     }
 }
 
-@media screen and (max-width: 800px) and (orientation: portrait) {
+@media screen and (max-width: 800px) {
     html {
         font-size: 10px;
     }
 
-    .social_links_computer{
-        display: none;
-    }
-
     .main_video_slide_text_ru {
         display: none;
-    }
-
-    .main_video {
-        width: 100%;
     }
 
     .main_video_ru {
@@ -1066,7 +1052,7 @@ h1 {
     }
 }
 
-@media screen and (max-width: 720px) and (orientation: portrait) {
+@media screen and (max-width: 720px) {
     .quote{
         display: none;
     }
@@ -1076,7 +1062,7 @@ h1 {
     }
 }
 
-@media screen and (max-width: 600px) and (orientation: portrait) {
+@media screen and (max-width: 600px) {
     html {
         font-size: 10px;
     }
@@ -1109,6 +1095,9 @@ h1 {
         margin-top: 4rem;
     }
 
+    .social_links_mobile img {
+        margin: 1rem;
+    }
 
     .contact-form {
         margin-top: 10rem;
@@ -1116,46 +1105,3 @@ h1 {
     }
 }
 
-@media screen and (max-width: 1000px) and (orientation: landscape) {
-    html {
-        font-size: 8px;
-    }
-
-    iframe {
-        height: 40rem;
-    }
-
-    #video {
-        height: 35rem;
-    }
-
-    .contact-form {
-        height: 100%;
-    }
-
-}
-
-
-@media screen and (max-width: 380px) and (max-height: 670px) and (orientation: portrait) {
-
-    .about_me_image {
-        width: 15rem;
-        margin-top: 2rem;
-    }
-
-    .my_mixes_playlists_selectors {
-        margin-top: 5rem;
-    }
-
-    .social_links_mobile {
-        margin-top: 25rem;
-    }
-
-    .my_mixes_title {
-        margin-top: 5rem;
-    }
-
-    .main_video iframe {
-        height: 450px;
-    }
-}
