@@ -59,7 +59,6 @@ h2 {
 
 .quote_mobile {
     display: none;
-    /* flex-direction: column; */
     width: 75vw;
     font-style: italic;
     line-height: 2em;
@@ -68,7 +67,6 @@ h2 {
 .quote_mobile h2 {
     color: #37447E;
     width: 100%;
-    height: 8vh;
     font-weight: 300;
     font-size: 1.4em;
     margin-bottom: 0.4rem;
@@ -181,18 +179,12 @@ header {
 
 .logo_page::after {
     content: '';
-    /* Necessary for the pseudo-element to be generated */
     position: absolute;
     right: 6.8rem;
-    /* Position the line 7.1rem from the right edge */
     top: 0;
-    /* Align the top of the line with the top of the section */
     bottom: 0;
-    /* Stretch the line to the bottom of the section */
     width: 5px;
-    /* Width of the line; adjust as needed */
     background-color: #37447e;
-    /* Color of the line; adjust as needed */
 }
 
 .logo_container {
@@ -211,7 +203,6 @@ header {
     align-items: center;
 }
 
-/* make the logo animation responsive */
 .p5Canvas {
     width: 18.75rem !important;
     height: 6.25rem !important;
@@ -471,15 +462,16 @@ h1 {
 }
 
 .main_video_slide_text_title {
-    margin-top: 2%;
+    margin: 2rem 0;
     color: white;
+    text-align: center;
 }
 
 .main_video_slide_text_first_p {
     margin: 4%;
     color: white;
 }
-
+ 
 .main_video_slide_text_second_p {
     margin: 4%;
     color: white;
@@ -888,6 +880,10 @@ h1 {
 
 @media screen and (max-width: 1300px) and (orientation: portrait) {
 
+    .logo_page {
+        display: none;
+    }
+
     .footer_page_certificates {
         display: none;
     }
@@ -925,11 +921,11 @@ h1 {
     }
 
     .main_video_slide_text{
-        margin-left: 5rem;
+        margin-left: 6rem;
     }
 
     .main_video_slide_text_first_p{
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
 
     .social_links_mobile {
@@ -941,23 +937,11 @@ h1 {
         margin: 2rem;
     }
 
-}
-
-@media screen and (max-width: 1170px) and (orientation: portrait) {
-    html {
-        font-size: 14px;
+    .main_video{
+        width: 25%;
+        display: flex;
     }
 
-    .about_me_section {
-        margin: 0 4rem;
-    }
-
-    .my_mixes_playlists_selectors img {
-        width: 64px;
-    }
-}
-
-@media screen and (max-width: 1000px) and (orientation: portrait) {
     .logo_page::after {
         content: none;
     }
@@ -982,6 +966,25 @@ h1 {
         content: none;
     }
 
+
+}
+
+@media screen and (max-width: 1170px) and (orientation: portrait) {
+    html {
+        font-size: 14px;
+    }
+
+    .about_me_section {
+        margin: 0 4rem;
+    }
+
+    .my_mixes_playlists_selectors img {
+        width: 64px;
+    }
+}
+
+@media screen and (max-width: 1000px) and (orientation: portrait) {
+   
     .contact_form_container{
         width: 80%;
     }
