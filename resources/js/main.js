@@ -61,7 +61,7 @@ function handleClickbuttonRU() {
   // title page
   document.getElementsByClassName("quote")[0].innerHTML =
     '<h2 class="quote_left"><span class="main_work_margin">-</span>"Основная концепция моей работы -</h2>' +
-    '<h2 class="quote_right">индивидуальный подход к каждому треку."</h2>';
+    '<h2 class="quote_right"> индивидуальный подход к каждому треку."</h2>';
   document.getElementsByClassName("quote_mobile")[0].innerHTML =
     '<h2><span class="main_work_margin">-</span>"Основная концепция моей работы - индивидуальный подход к каждому треку."</h2>';
   document.getElementsByClassName("name_title")[0].innerHTML = "Глеб Кияшко";
@@ -77,8 +77,7 @@ function handleClickbuttonRU() {
     "main_video_slide_text_second_p"
   )[0].innerHTML = `Он как будто выстраивает сцену.
     Раздает роли каждому инструменту, меняет их по ходу микса, чтобы то один инструмент привлек на себя
-    внимание, то другой.
-    Чтобы взаимодействуя друг с другом инструменты вели слушателя по миксу и разыгрывали перед ним аудио спектакль.`;
+    внимание, то другой. Чтобы взаимодействуя друг с другом инструменты вели слушателя по миксу и разыгрывали перед ним аудио спектакль.`;
   document.getElementsByClassName(
     "main_video_slide_text_third_p"
   )[0].innerHTML = `Привлекать и удерживать
@@ -107,7 +106,7 @@ function handleClickbuttonRU() {
   document.getElementsByClassName("q1")[0].innerHTML =
     "Не нашел подходящие примеры сведения? Eсть еще!";
   document.getElementsByClassName("a1")[0].innerHTML =
-    "Да, в плейлистах только часть моих работ, не всегда успеваю их обновлять.Напиши мне, и я скину свежие примеры в интересующем тебя стиле.";
+    "Да, в плейлистах только часть моих работ, не всегда успеваю их обновлять. Напиши мне, и я скину свежие примеры в интересующем тебя стиле.";
   document.getElementsByClassName("q2")[0].innerHTML = "Сколько стоит?";
   document.getElementsByClassName("a2")[0].innerHTML =
     "Цена зависит от сложности вашего проекта - от 3.000₽ до 10.000₽.";
@@ -116,8 +115,8 @@ function handleClickbuttonRU() {
     "Срок выполнения 7-10 дней.";
   document.getElementsByClassName("q4")[0].innerHTML = "А если не понравится?";
   document.getElementsByClassName("a4")[0].innerHTML =
-    "Перед началом мы тщательно обговорим, что вы хотите получить в итоге.Конечно, доступно внесение правок. Но если даже после них будет" +
-    '"вообще не то,"' +
+    "Перед началом мы тщательно обговорим, что вы хотите получить в итоге. Конечно, доступно внесение правок. Но если даже после них будет" +
+    ' "вообще не то,"' +
     " я возвращаю полную сумму.";
   document.getElementsByClassName("q5")[0].innerHTML = "Остались вопросы?";
   document.getElementsByClassName("a5")[0].innerHTML =
