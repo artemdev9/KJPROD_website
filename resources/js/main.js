@@ -1,5 +1,5 @@
 function animationUp() {
-  var reveals = document.querySelectorAll(".animationUp"); 
+  var reveals = document.querySelectorAll(".animationUp");
   for (var i = 0; i < reveals.length; i++) {
     var windowHeight = window.innerHeight;
     var elementTop = reveals[i].getBoundingClientRect().top;
@@ -123,7 +123,7 @@ function handleClickbuttonEN() {
     '<h2 class="quote_right">an individual approach to each track."</h2>';
   document.getElementsByClassName("quote_mobile")[0].innerHTML =
     '<h2><span class="main_work_margin">-</span>"The main concept of my work - an individual approach to each track."</h2>';
-  document.getElementsByClassName("name_title")[0].innerHTML = "Gleb Kiashko";
+  document.getElementsByClassName("name_title")[0].innerHTML = "Gleb Kiiashko";
   document.getElementsByClassName("job_title")[0].innerHTML =
     "Founder & <br> Sound engineer";
   //main_video_slide
