@@ -1,15 +1,11 @@
 let lines = 18;
 let lineFrequency = 0.01;
-let amplitude = 36; // needs to be rem
+let amplitude = 36;
 let movementSpeed = 0.01;
 let wavelength = 0.5;
 let waveDirection = -1;
-let widthOfCanvas = 300; // needs to be rem
-let heightOfCanvas = 100; // needs to be rem
-
-// 
-
-// trigger when screen gets resized then calculate the rem to set up width and height
+let widthOfCanvas = 300;
+let heightOfCanvas = 100;
 
 function setup() {
   var myCanvas = createCanvas(widthOfCanvas, heightOfCanvas);

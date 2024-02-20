@@ -1,4 +1,3 @@
-// Define a function named "reveal"
 function animationUp() {
   // Select all elements with the class "reveal" and store them in a NodeList
 
