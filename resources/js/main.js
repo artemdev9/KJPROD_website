@@ -151,7 +151,7 @@ function handleClickbuttonEN() {
     "My portfolio";
   // contact me
   document.getElementsByClassName("contact_me_title")[0].innerHTML =
-    "Contact me";
+    "Reach out to me for more examples";
   document.getElementsByClassName("name")[0].placeholder = "name";
   document.getElementsByClassName("email")[0].placeholder = "email";
   document.getElementsByClassName("message")[0].placeholder = "message";
