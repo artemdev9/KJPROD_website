@@ -90,7 +90,7 @@ function handleClickbuttonRU() {
     "Да, в плейлистах только часть моих работ, не всегда успеваю их обновлять. Напиши мне, и я скину свежие примеры в интересующем тебя стиле.";
   document.getElementsByClassName("q2")[0].innerHTML = "Сколько стоит?";
   document.getElementsByClassName("a2")[0].innerHTML =
-    "Цена зависит от сложности вашего проекта - от 3.000₽ до 10.000₽.";
+    "Цена зависит от наполненности вашего проекта и пожеланий, начинается от 100$.";
   document.getElementsByClassName("q3")[0].innerHTML = "Сколько ждать?";
   document.getElementsByClassName("a3")[0].innerHTML =
     "Срок выполнения 7-10 дней.";
